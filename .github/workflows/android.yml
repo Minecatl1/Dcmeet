@@ -25,7 +25,9 @@ jobs:
           cache: gradle
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4.0.4
+        with:
+          packages: 'platform-tools emulator'
 
       - name: Install Android platform and build tools
         run: |
